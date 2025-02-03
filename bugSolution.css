@@ -1,0 +1,9 @@
+The solution involves removing the conflicting style declaration, leaving only the `@apply` directive to manage styles:
+
+```css
+.btn {
+  @apply bg-blue-500 hover:bg-blue-700;
+}
+```
+
+Alternatively, if you need more complex customization, consider using Tailwind's utility classes directly without `@apply` or create a new utility class to encapsulate the specific styling that you need.
