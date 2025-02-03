@@ -1,0 +1,10 @@
+This error occurs when using Tailwind CSS with the `@apply` directive and a class that has conflicting or overlapping styles.  For instance:
+
+```css
+.btn {
+  @apply bg-blue-500 hover:bg-blue-700;
+  background-color: red; /* Conflicting style */
+}
+```
+
+The `background-color: red;` directly overrides the styles applied by `@apply`.  Tailwind's `@apply` essentially inlines CSS classes; it doesn't have a higher priority than other styles declared directly within the element's styles.
